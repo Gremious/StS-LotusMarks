@@ -2,6 +2,7 @@
 
 # StS-LotusCardsMod
 A mod for Slay the Spire which adds a new "Lotus Mark" archetype for The Silent.
+Has full Archetype-API support!
 
 A synergy focused archetype in which some cards Mark target enemies and others increase their damage/effects based on how many marks there are.
 

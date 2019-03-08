@@ -2,8 +2,10 @@
   "modid": "lotusmark",
   "name": "Lotus Mark",
   "author_list": ["Gremious"],
-  "description": "Lotus Mark adds a new 'Lotus' archtype for The Silent!",
-  "version": "0.1",
-  "sts_version": "06-15-2018",
-  "mts_version": "2.7.0"
+  "description": "Adds a new 'Lotus' archtype for The Silent, focused on marking enemies.",
+  "version": "${project.version}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
+  "dependencies": ["basemod"]
 }
+

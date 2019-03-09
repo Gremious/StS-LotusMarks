@@ -1,8 +1,13 @@
 {
   "lotusMarks:LotusChain": {
     "NAME": "Lotus Chain",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each lotusmarks:Lotus_Mark. on any enemy.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each lotusmarks:Lotus_Mark on any enemy.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy for each Lotus Mark on any enemy."
+  },
+  "lotusMarks:SeasonOfFire": {
+    "NAME": "Season Of Fire",
+    "DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have."
   },
   "lotusMarks:LotusSlash": {
     "NAME": "Lotus Slash",
@@ -19,20 +24,15 @@
     "DESCRIPTION": "Apply !M! Lotus Mark and !M! vulnerable on an enemy.",
     "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks and !M! vulnerable on an enemy."
   },
-  "lotusMarks:LotusFullBloom": {
+  "lotusMarks:FullBloom": {
     "NAME": "Full Bloom",
-    "DESCRIPTION": "Apply !M! Lotus Marks to all enemies.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks to all enemies."
+    "DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies.",
+    "UPGRADE_DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies."
   },
   "lotusMarks:LotusHunt": {
     "NAME": "On The Hunt",
     "DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust."
-  },
-  "lotusMarks:SeasonOfFire": {
-    "NAME": "Season Of Fire",
-    "DESCRIPTION": "Deal !D! damage to every enemy for each Lotus Mark they have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each Lotus Mark they have."
   },
   "lotusMarks:LotusSkilled": {
     "NAME": "Skilled Execution",

@@ -80,7 +80,7 @@ public class LotusMarks implements
 
         BaseMod.addCard(new LotusChain());
         BaseMod.addCard(new SeasonOfFire());
-        BaseMod.addCard(new LotusFullBloom());
+        BaseMod.addCard(new FullBloom());
         BaseMod.addCard(new LotusHunt());
         BaseMod.addCard(new LotusMark());
         BaseMod.addCard(new LotusSkilled());

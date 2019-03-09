@@ -35,8 +35,8 @@ public class SeasonOfFire extends CustomCard {
 
     private static final int COST = 2;
 
-    private static int DAMAGE = 4;
-    private static int DAMAGE_UPGRADE = 2;
+    public static int DAMAGE = 4;
+    public static int DAMAGE_UPGRADE = 2;
 
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

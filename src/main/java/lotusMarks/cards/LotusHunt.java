@@ -1,4 +1,4 @@
-package lotusMarks.cards;
+package lotus.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.actions.common.*;
 import basemod.abstracts.CustomCard;
-import lotusMarks.LotusMarks;
+import lotus.Lotus;
 
 
 public class LotusHunt
@@ -18,8 +18,8 @@ extends CustomCard {
 /*
     "LotusHunt": {
         "NAME": "On The Hunt",
-        "DESCRIPTION": "Gain strength equal to the total number of LotusMarks Marks on all enemies. Exhaust.",
-        "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of LotusMarks Marks on all enemies. Exhaust."
+        "DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. Exhaust.",
+        "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. Exhaust."
 */
 
 // TEXT DECLARATION	
@@ -33,7 +33,7 @@ extends CustomCard {
 	
 // -TEXT DECLARATION-
 	
-	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_HUNT);
+	public static final String IMG = Lotus.makePath(Lotus.LOTUS_HUNT);
 	
 // STAT DECLARATION	
 	

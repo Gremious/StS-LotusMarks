@@ -1,9 +1,9 @@
-package lotusMarks.powers;
+package lotus.powers;
 
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.core.*;
 import com.megacrit.cardcrawl.powers.*;
-import lotusMarks.LotusMarks;
+import lotus.Lotus;
 
 public class LotusMarkPower extends AbstractPower {
 	public AbstractCreature source;
@@ -21,7 +21,7 @@ public class LotusMarkPower extends AbstractPower {
         this.updateDescription();
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
-        this.img = LotusMarks.getLotusMarkTexture();
+        this.img = Lotus.getLotusMarkTexture();
         this.source = source;
         
     }

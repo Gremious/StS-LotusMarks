@@ -1,4 +1,4 @@
-package lotusMarks.cards;
+package lotus.cards;
 
 import com.megacrit.cardcrawl.cards.*;
 import com.megacrit.cardcrawl.localization.*;
@@ -11,8 +11,8 @@ import org.apache.logging.log4j.Logger;
 
 import basemod.abstracts.CustomCard;
 
-import lotusMarks.*;
-import lotusMarks.powers.*;
+import lotus.*;
+import lotus.powers.*;
 import com.megacrit.cardcrawl.core.*;
 
 public class LotusSkilled extends CustomCard
@@ -29,8 +29,8 @@ public class LotusSkilled extends CustomCard
     
 // -TEXT DECLARATION-
     
-	public static final Logger logger = LogManager.getLogger(LotusMarks.class.getName());
-	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_SKILLED);
+	public static final Logger logger = LogManager.getLogger(Lotus.class.getName());
+	public static final String IMG = Lotus.makePath(Lotus.LOTUS_SKILLED);
 	
 // STAT DECLARATION
 	
@@ -56,7 +56,7 @@ public class LotusSkilled extends CustomCard
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
     	logger.info("Card Use Start");
-
+    	
     	if (m.hasPower("Lotus_Mark")) {
     	int count = countUpDebuffs(m);
     	this.magicNumber = count-1;

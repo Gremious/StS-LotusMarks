@@ -1,4 +1,4 @@
-package lotusMarks.cards;
+package lotus.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import lotusMarks.LotusMarks;
+import lotus.Lotus;
 
 
 public class LotusStrike
@@ -17,9 +17,9 @@ extends CustomCard {
 	
 /*
 	"LotusStrike": {
-        "NAME": "LotusMarks Strike",
-        "DESCRIPTION": "Deal !D! damage. +!M! for every LotusMarks Mark on the enemy.",
-        "UPGRADE_DESCRIPTION": "Deal !D! damage. +!M! for every LotusMarks Mark on the enemy."
+        "NAME": "Lotus Strike",
+        "DESCRIPTION": "Deal !D! damage. +!M! for every Lotus Mark on the enemy.",
+        "UPGRADE_DESCRIPTION": "Deal !D! damage. +!M! for every Lotus Mark on the enemy."
 */
 	
 // TEXT DECLARATION 
@@ -33,7 +33,7 @@ extends CustomCard {
 
 // -TEXT DECLARATION
 	
-	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_STRIKE);
+	public static final String IMG = Lotus.makePath(Lotus.LOTUS_STRIKE);
 	
 // STAT DECLARATION 
 	

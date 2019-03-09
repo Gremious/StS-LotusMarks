@@ -1,4 +1,4 @@
-package lotusMarks.cards;
+package lotus.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,16 +8,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import lotusMarks.LotusMarks;
-import lotusMarks.powers.LotusMarkPower;
+import lotus.Lotus;
+import lotus.powers.LotusMarkPower;
 
 public class LotusFullBloom
 extends CustomCard {
 /*
 "LotusFullBloom": {
         "NAME": "Full Bloom",
-        "DESCRIPTION": "Apply !M! LotusMarks Marks to all enemies.",
-        "UPGRADE_DESCRIPTION": "Apply !M! LotusMarks Marks to all enemies."
+        "DESCRIPTION": "Apply !M! Lotus Marks to all enemies.",
+        "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks to all enemies."
 */
 	
 // TEXT DECLARATION
@@ -31,7 +31,7 @@ extends CustomCard {
 	
 // -TEXT DECLARATION-
 
-	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_FULL_BLOOM);
+	public static final String IMG = Lotus.makePath(Lotus.LOTUS_FULL_BLOOM);
 	
 // STAT DECLARATION
 

@@ -1,4 +1,4 @@
-package lotusMarks.cards;
+package lotus.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
-import lotusMarks.LotusMarks;
-import lotusMarks.powers.LotusMarkPower;
+import lotus.Lotus;
+import lotus.powers.LotusMarkPower;
 
 
 public class LotusSlash
@@ -19,9 +19,9 @@ extends CustomCard {
 	
 /*
      "LotusSlash": 
-        "NAME": "LotusMarks Slash",
-        "DESCRIPTION": "Deal !D! damage. NL Apply !M! LotusMarks Mark.",
-        "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! LotusMarks Marks."
+        "NAME": "Lotus Slash",
+        "DESCRIPTION": "Deal !D! damage. NL Apply !M! Lotus Mark.",
+        "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Lotus Marks."
 */
 	
 // TEXT DECLARATION 
@@ -35,7 +35,7 @@ extends CustomCard {
 
 // TEXT DECLARATION 
 	
-	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_SLASH);
+	public static final String IMG = Lotus.makePath(Lotus.LOTUS_SLASH);
 
 // STAT DECLARATION 	
 	

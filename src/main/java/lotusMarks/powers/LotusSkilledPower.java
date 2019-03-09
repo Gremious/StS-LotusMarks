@@ -1,4 +1,4 @@
-package lotusMarks.powers;
+package lotus.powers;
 
 import com.megacrit.cardcrawl.dungeons.*;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.core.*;
 import com.megacrit.cardcrawl.powers.*;
 
-import lotusMarks.LotusMarks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,10 +14,12 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 
+import lotus.Lotus;
+
 public class LotusSkilledPower extends AbstractPower {
 
 	public AbstractCreature source;
-	public static final Logger logger = LogManager.getLogger(LotusMarks.class.getName());
+	public static final Logger logger = LogManager.getLogger(Lotus.class.getName());
 	
 	public static final String POWER_ID = "LotusSkilledPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -35,7 +36,7 @@ public class LotusSkilledPower extends AbstractPower {
         this.updateDescription();
         this.type = PowerType.BUFF;	
         this.isTurnBased = false;
-        this.img = LotusMarks.getLotusSkilledPower();
+        this.img = Lotus.getLotusSkilledPower();
         this.source = source;
         
     	logger.info("Declaration end");
@@ -82,7 +83,7 @@ public class LotusSkilledPower extends AbstractPower {
             tmp.purgeOnUse = true;
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
             if (tmp.cardID.equals("Rampage")) {
-                AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(card.uuid, tmp.magicNumber));
+                AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(card, tmp.magicNumber));
             }
             --this.amount;
             }

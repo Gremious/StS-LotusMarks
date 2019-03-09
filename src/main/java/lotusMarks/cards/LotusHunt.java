@@ -1,4 +1,4 @@
-package lotus.cards;
+package lotusMarks.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

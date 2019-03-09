@@ -187,4 +187,8 @@ public class LotusMarks implements
         }// NO
     }// NO
     // ====== YOU CAN EDIT AGAIN ======
+
+    public static String makeID(String idText) {
+        return getModID() + ":" + idText;
+    }
 }

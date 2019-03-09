@@ -1,4 +1,4 @@
-package lotus.cards;
+package lotusMarks.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,20 +23,20 @@ extends CustomCard {
         "DESCRIPTION": "Apply !M! Lotus Mark and !M! vulnerable on an enemy.",
         "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks and !M! vulnerable on an enemy."
 */
-	
+
 // TEXT DECLARATION
-	
+
 	public static final String ID = "LotusMark";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	
+
 	public static final	String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	
+
 // -TEXT DECLARATION-
-	
+
 	public static final String IMG = Lotus.makePath(Lotus.LOTUS_MARK);
-	
+
 // STAT DECLARATION
 
 	private static final CardRarity RARITY = CardRarity.COMMON;
@@ -44,27 +44,27 @@ extends CustomCard {
 	private static final CardType TYPE = CardType.SKILL;
 	public static final CardColor COLOR = AbstractCard.CardColor.GREEN;
 
-	private static final int COST = 0;	
-	
+	private static final int COST = 0;
+
 	private static final int MAGIC = 1;
 	private static final int UPGRADE_MAGIC = 1;
-	
+
 // -STAT DECLARATION-
 
-	
+
 	public LotusMark() {
-		
-		
+
+
 		super(ID,NAME,IMG,COST,DESCRIPTION,TYPE,COLOR,RARITY,TARGET);
 		this.magicNumber = this.baseMagicNumber = MAGIC;
-		
+
 	}
-	
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new LotusMarkPower(m, p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-    	
+
     	}
 
     @Override

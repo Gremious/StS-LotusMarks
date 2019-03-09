@@ -1,4 +1,4 @@
-package lotus.cards;
+package lotusMarks.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -11,9 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.core.*;
 
 import basemod.abstracts.CustomCard;
-import lotus.Lotus;
-import lotus.powers.*;
-import lotus.cards.*;
+import lotusMarks.powers.*;
+import lotusMarks.cards.*;
 
 
 public class LotusTest

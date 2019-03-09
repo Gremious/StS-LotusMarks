@@ -1,4 +1,4 @@
-package lotus.powers;
+package lotusMarks.powers;
 
 import com.megacrit.cardcrawl.dungeons.*;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -46,7 +46,6 @@ public class LotusSkilledPower extends AbstractPower {
     @Override
     public void updateDescription() 
     {
-    	logger.info("Description Start");
 
     	if (this.amount == 1){     
     		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
@@ -55,8 +54,6 @@ public class LotusSkilledPower extends AbstractPower {
     	else if (this.amount > 1) {
     		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
     	}
-    	
-    	logger.info("Description end");
 
     	}
  //=====================

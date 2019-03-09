@@ -29,7 +29,7 @@
     "DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies.",
     "UPGRADE_DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies."
   },
-  "lotusMarks:LotusHunt": {
+  "lotusMarks:OnTheHunt": {
     "NAME": "On The Hunt",
     "DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust."

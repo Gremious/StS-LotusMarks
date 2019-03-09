@@ -1,19 +1,13 @@
-package lotus.cards;
+package lotusMarks.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.core.*;
 
 import basemod.abstracts.CustomCard;
-import lotus.Lotus;
-import lotus.powers.*;
-import lotus.cards.*;
+import lotusMarks.LotusMarks;
 
 
 public class LotusTest
@@ -22,8 +16,8 @@ extends CustomCard {
 /*
 	"LotusFire": {
         "NAME": "Season of Fire",
-        "DESCRIPTION": " Deal !D! damage to every enemy for each Lotus Mark they have (?).",
-        "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each Lotus Mark they have(?)."
+        "DESCRIPTION": " Deal !D! damage to every enemy for each LotusMarks Mark they have (?).",
+        "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each LotusMarks Mark they have(?)."
 }
 */
 	
@@ -38,7 +32,7 @@ extends CustomCard {
 	
 // -TEXT DECLARATION- 
 	
-	public static final String IMG = Lotus.makePath(Lotus.LOTUS_TEST);
+	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_TEST);
 	
 // STAT DECLARATION 
 	

@@ -1,4 +1,4 @@
-package lotus.cards;
+package lotusMarks.cards;
 
 import com.megacrit.cardcrawl.cards.*;
 import com.megacrit.cardcrawl.localization.*;
@@ -11,8 +11,8 @@ import org.apache.logging.log4j.Logger;
 
 import basemod.abstracts.CustomCard;
 
-import lotus.*;
-import lotus.powers.*;
+import lotusMarks.*;
+import lotusMarks.powers.*;
 import com.megacrit.cardcrawl.core.*;
 
 public class LotusSkilled extends CustomCard
@@ -29,8 +29,8 @@ public class LotusSkilled extends CustomCard
     
 // -TEXT DECLARATION-
     
-	public static final Logger logger = LogManager.getLogger(Lotus.class.getName());
-	public static final String IMG = Lotus.makePath(Lotus.LOTUS_SKILLED);
+	public static final Logger logger = LogManager.getLogger(LotusMarks.class.getName());
+	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_SKILLED);
 	
 // STAT DECLARATION
 	

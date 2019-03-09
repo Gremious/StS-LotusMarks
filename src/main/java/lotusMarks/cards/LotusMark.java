@@ -1,4 +1,4 @@
-package lotus.cards;
+package lotusMarks.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import basemod.abstracts.CustomCard;
-import lotus.Lotus;
-import lotus.powers.LotusMarkPower;
+import lotusMarks.LotusMarks;
+import lotusMarks.powers.LotusMarkPower;
 
 
 public class LotusMark
@@ -20,8 +20,8 @@ extends CustomCard {
 /*
 "Mark": {
         "NAME": "Mark",
-        "DESCRIPTION": "Apply !M! Lotus Mark and !M! vulnerable on an enemy.",
-        "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks and !M! vulnerable on an enemy."
+        "DESCRIPTION": "Apply !M! LotusMarks Mark and !M! vulnerable on an enemy.",
+        "UPGRADE_DESCRIPTION": "Apply !M! LotusMarks Marks and !M! vulnerable on an enemy."
 */
 	
 // TEXT DECLARATION
@@ -35,7 +35,7 @@ extends CustomCard {
 	
 // -TEXT DECLARATION-
 	
-	public static final String IMG = Lotus.makePath(Lotus.LOTUS_MARK);
+	public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_MARK);
 	
 // STAT DECLARATION
 

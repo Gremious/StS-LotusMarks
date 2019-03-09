@@ -1,4 +1,4 @@
-package lotus.cards;
+package lotusMarks.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import lotus.Lotus;
+import lotusMarks.LotusMarks;
 import basemod.abstracts.CustomCard;
 
 
@@ -17,9 +17,9 @@ public class LotusChain
 	
 /*
  "LotusChain": {
-        "NAME": "Lotus Chain",
-        "DESCRIPTION": "Deal !D! damage to a random enemy two times, and an extra time for each Lotus Mark on any enemy.",
-        "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy three times, and an extra time for each Lotus Mark on any enemy."
+        "NAME": "LotusMarks Chain",
+        "DESCRIPTION": "Deal !D! damage to a random enemy two times, and an extra time for each LotusMarks Mark on any enemy.",
+        "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy three times, and an extra time for each LotusMarks Mark on any enemy."
 */
 
 // TEXT DECLARATION
@@ -33,7 +33,7 @@ public class LotusChain
 
 // -TEXT DECLARATION-	
 
-    public static final String IMG = Lotus.makePath(Lotus.LOTUS_CHAIN);
+    public static final String IMG = LotusMarks.makePath(LotusMarks.LOTUS_CHAIN);
 
 // STAT DECLARATION
 

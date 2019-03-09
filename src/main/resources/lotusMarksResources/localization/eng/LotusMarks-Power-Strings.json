@@ -1,11 +1,18 @@
 {
-"LotusSkilledPower": {
-        "NAME": "Skilled Application",
-        "DESCRIPTIONS": ["Your next attack this turn is going to be played ", " extra time.", " extra times"]
-},
-
-"Lotus_Mark": {
-        "NAME": "Lotus Mark",
-        "DESCRIPTIONS": ["Marked for death. This enemy has ", " lotus mark. Other cards benefit from marks to apply extra effects."," lotus marks. Other cards benefit from marks to apply extra effects."]
-}
+  "LotusSkilledPower": {
+    "NAME": "Skilled Application",
+    "DESCRIPTIONS": [
+      "Your next attack this turn is going to be played ",
+      " extra time.",
+      " extra times"
+    ]
+  },
+  "Lotus_Mark": {
+    "NAME": "Lotus Mark",
+    "DESCRIPTIONS": [
+      "Marked for death. This enemy has ",
+      " lotus mark. Other cards benefit from marks to apply extra effects.",
+      " lotus marks. Other cards benefit from marks to apply extra effects."
+    ]
+  }
 }

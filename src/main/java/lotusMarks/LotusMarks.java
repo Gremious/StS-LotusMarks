@@ -8,94 +8,78 @@ import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import lotusMarks.cards.*;
+import lotusMarks.util.TextureLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import static archetypeAPI.ArchetypeAPI.BADGE_IMAGE;
 
 @SpireInitializer
 public class LotusMarks implements
         EditCardsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        PostInitializeSubscriber  {
+        PostInitializeSubscriber {
     public static final Logger logger = LogManager.getLogger(LotusMarks.class.getName());
 
     private static final String MODNAME = "Lotus Marks Mod";
     private static final String AUTHOR = "Gremious";
     private static final String DESCRIPTION = "Slay the Spire mod adding a new 'LotusMarks' archetype for the Silent!";
+    public static final String BADGE_IMAGE = "lotusMarksResources/images/Badge.png";
 
     private static String modID;
 
-	// =============== SUBSCRIBE AND INITIALIZE =================
+    // =============== SUBSCRIBE AND INITIALIZE =================
 
     public LotusMarks() {
-    	logger.info("Subscribe to things");
+        logger.info("Subscribe to things");
         BaseMod.subscribe(this);
         setModID("lotusMarks");
         logger.info("Done subscribing");
     }
 
-    public static void initialize(){
-    	logger.info("Initialize");
-    	
-		@SuppressWarnings("unused")
+    public static void initialize() {
+        logger.info("Initialize");
+
+        @SuppressWarnings("unused")
         LotusMarks lotusMarks = new LotusMarks();
-		
-    	logger.info("Initialized");
+
+        logger.info("Initialized");
     }
-	// ============== /SUBSCRIBE AND INITIALIZE/ =================
-    
+    // ============== /SUBSCRIBE AND INITIALIZE/ =================
 
-    // ============== ADD CARD ART =================
-    private static final String MOD_ASSETS_FOLDER = "images";
-    
-    public static final String makePath(String resource) {
-    	return  MOD_ASSETS_FOLDER + "/" + resource;
+
+    // =============== MAKE IMAGE PATHS =================
+
+    public static String makeCardPath(String resourcePath) {
+        return getModID() + "Resources/images/cards/" + resourcePath;
     }
-    
 
-    public static final String BADGE_IMAGE = "powers/lotus_mark.png";
-    //Power strings
-    public static final String LOTUS_MARK_POWER = "powers/lotus_mark.png";
-    public static final String SKILLED_POWER = "powers/skilled_power.png";
-	
-    //Card Strings
-    public static final String LOTUS_CHAIN = "cards/lotus_chain.png";
-    public static final String LOTUS_FIRE = "cards/season_of_fire.png";
-    public static final String LOTUS_FULL_BLOOM = "cards/full_bloom.png";
-    public static final String LOTUS_HUNT = "cards/on_the_hunt.png";
-    public static final String LOTUS_MARK = "cards/mark.png";
-    public static final String LOTUS_SKILLED = "cards/skilled_application.png";
-    public static final String LOTUS_SLASH = "cards/lotus_slash.png";
-    public static final String LOTUS_STRIKE = "cards/lotus_strike.png";
-    public static final String LOTUS_TEST = "cards/placeholder.png";
+    public static String makePowerPath(String resourcePath) {
+        return getModID() + "Resources/images/powers/" + resourcePath;
+    }
 
-    //Load Strings
-    	//Load Powers
-    public static Texture getLotusMarkTexture() { return new Texture(makePath(LOTUS_MARK_POWER));	}
-    public static Texture getLotusSkilledPower() { return new Texture(makePath(SKILLED_POWER));	}	
-    
-    // ============== /ADD CARD ART/ ================
-    
-    
+    // =============== /MAKE IMAGE PATHS/ =================
+
+
     // ================ ADD CARDS ===================
     @Override
     public void receiveEditCards() {
-    	logger.info("Add Card");
-    	
+        logger.info("Add Card");
+
         BaseMod.addCard(new LotusChain());
         BaseMod.addCard(new LotusFire());
         BaseMod.addCard(new LotusFullBloom());
@@ -104,8 +88,8 @@ public class LotusMarks implements
         BaseMod.addCard(new LotusSkilled());
         BaseMod.addCard(new LotusSlash());
         BaseMod.addCard(new LotusStrike());
-    	//BaseMod.addCard(new LotusTest());
-        
+        //BaseMod.addCard(new LotusTest());
+
         logger.info("Cards - added!");
 
     }
@@ -149,16 +133,17 @@ public class LotusMarks implements
     // ================ /LOAD THE KEYWORDS/ ===================
 
 
-  @Override
-  public void receivePostInitialize() {
-      // Mod badge
-      Texture badgeTexture = new Texture(makePath(BADGE_IMAGE));
-      ModPanel settingsPanel = new ModPanel();
-      settingsPanel.addUIElement(new ModLabel("LotusMarks Mark doesn't have any settings!", 400.0f, 700.0f, settingsPanel, (me)->{}));
-      BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
-  }
-  
-  
+    @Override
+    public void receivePostInitialize() {
+        // Mod badge
+        Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
+        ModPanel settingsPanel = new ModPanel();
+        settingsPanel.addUIElement(new ModLabel("LotusMarks Mark doesn't have any settings!", 400.0f, 700.0f, settingsPanel, (me) -> {
+        }));
+        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+    }
+
+
     // =============== /ADD CARDS/ ==================
 
     // ====== NO EDIT AREA ======

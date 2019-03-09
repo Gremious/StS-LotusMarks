@@ -82,7 +82,7 @@ public class LotusSkilledPower extends AbstractPower {
             tmp.purgeOnUse = true;
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
             if (tmp.cardID.equals("Rampage")) {
-                AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(card, tmp.magicNumber));
+                AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(card.uuid, tmp.magicNumber));
             }
             --this.amount;
             }

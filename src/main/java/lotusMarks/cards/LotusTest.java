@@ -19,7 +19,7 @@ public class LotusTest
 extends CustomCard {
 	
 /*
-	"LotusFire": {
+	"SeasonOfFire": {
         "NAME": "Season of Fire",
         "DESCRIPTION": " Deal !D! damage to every enemy for each Lotus Mark they have (?).",
         "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each Lotus Mark they have(?)."

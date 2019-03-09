@@ -1,45 +1,45 @@
 {
-  "LotusSlash": {
+  "lotusMarks:LotusChain": {
+    "NAME": "Lotus Chain",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each lotusmarks:Lotus_Mark. on any enemy.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy for each Lotus Mark on any enemy."
+  },
+  "lotusMarks:LotusSlash": {
     "NAME": "Lotus Slash",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Lotus Mark.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Lotus Marks."
   },
-  "LotusStrike": {
+  "lotusMarks:LotusStrike": {
     "NAME": "Lotus Strike",
     "DESCRIPTION": "Deal !D! damage. + !M! for every Lotus Mark on the enemy.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. + !M! for every Lotus Mark on the enemy."
   },
-  "LotusMark": {
+  "lotusMarks:LotusMark": {
     "NAME": "Mark",
     "DESCRIPTION": "Apply !M! Lotus Mark and !M! vulnerable on an enemy.",
     "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks and !M! vulnerable on an enemy."
   },
-  "LotusFullBloom": {
+  "lotusMarks:LotusFullBloom": {
     "NAME": "Full Bloom",
     "DESCRIPTION": "Apply !M! Lotus Marks to all enemies.",
     "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks to all enemies."
   },
-  "LotusChain": {
-    "NAME": "Lotus Chain",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each Lotus Mark on any enemy.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy for each Lotus Mark on any enemy."
-  },
-  "LotusHunt": {
+  "lotusMarks:LotusHunt": {
     "NAME": "On The Hunt",
     "DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust."
   },
-  "LotusFire": {
-    "NAME": "Season of Fire",
+  "lotusMarks:SeasonOfFire": {
+    "NAME": "Season Of Fire",
     "DESCRIPTION": "Deal !D! damage to every enemy for each Lotus Mark they have.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each Lotus Mark they have."
   },
-  "LotusSkilled": {
+  "lotusMarks:LotusSkilled": {
     "NAME": "Skilled Execution",
-    "DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of Lotus Marks on the target.",
-    "UPGRADE_DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of Lotus Marks on the target."
+    "DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target.",
+    "UPGRADE_DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target."
   },
-  "LotusTest": {
+  "lotusMarks:LotusTest": {
     "NAME": "This is a test name.",
     "DESCRIPTION": "Deal !D! damage. !M! Magic Number. Lotus Mark.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. !M! Magic Number. Lotus Mark."

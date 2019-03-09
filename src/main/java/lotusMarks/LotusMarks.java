@@ -25,8 +25,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-import static archetypeAPI.ArchetypeAPI.BADGE_IMAGE;
-
 @SpireInitializer
 public class LotusMarks implements
         EditCardsSubscriber,
@@ -81,7 +79,7 @@ public class LotusMarks implements
         logger.info("Add Card");
 
         BaseMod.addCard(new LotusChain());
-        BaseMod.addCard(new LotusFire());
+        BaseMod.addCard(new SeasonOfFire());
         BaseMod.addCard(new LotusFullBloom());
         BaseMod.addCard(new LotusHunt());
         BaseMod.addCard(new LotusMark());

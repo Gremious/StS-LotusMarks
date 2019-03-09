@@ -35,9 +35,9 @@ Attacks
 
 Skills
 
-	Mark 1(0). - Apply 1 (2) Lotus mark and 1 (2) vulnerable. Exhaust.
+	Mark 1(0). - Apply 1 (2) Lotus Mark(s). Gain 1(2) Strength. At the end of your turn lose 1(2) Strength. Exhaust.
 
-	Uncommon✱ 2(1). Full Bloom - Apply 2 Lotus Marks to all enemies.
+	Uncommon✱ 1. Full Bloom - Grave. Autoplay. Apply 1(2) Lotus Marks to all enemies.
 	
 	Uncommon✱ 2(1). On the hunt - Gain strength equal to the total number of Lotus Marks on all enemies. Exhaust.
 

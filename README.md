@@ -23,37 +23,22 @@ Thank you and enjoy :)
 
 Full Card List:
 
+Attacks
 
-Attacks 
-
-1 mana:
-
-	Lotus Slash - Deal 7 (8) damage and apply 1 (2) Lotus Marks.
+	Common Attack: 1. Lotus Slash  - Deal 7 (8) damage and apply 1 (2) Lotus Marks.
   
-	Lotus Strike - 6 damage, +2 (+4) for every Lotus Mark on the enemy.
+	Common Attack: 1. Lotus Strike - 6 damage, +2 (+4) for every Lotus Mark on the enemy.
 	
-	Lotus Chain - Deal 4 (5) damage to a random enemy for each Lotus Mark on any enemy.
+	Uncommon Attack 1. Lotus Chain - Deal 4 (5) damage to a random enemy for each Lotus Mark on any enemy.
 
-2 mana:
-
-	Season of Fire - Deal 4(6) damage to every enemy for each Lotus Mark they have.
-
-
+	Uncommon Attack: 2. Season of Fire - Deal 4(6) damage to every enemy for each Lotus Mark they have.
 
 Skills
 
-1 mana
+	Mark 1(0). - Apply 1 (2) Lotus mark and 1 (2) vulnerable. Exhaust.
 
-	Mark (0) - Apply 1 (2) Lotus mark and 1 (2) vulnerable. Exhaust.
-
-2 mana
-
-	Uncommon✱ Full Bloom (1 mana) - Apply 2 Lotus Marks to all enemies.
+	Uncommon✱ 2(1). Full Bloom - Apply 2 Lotus Marks to all enemies.
 	
-	Uncommon✱ On the hunt (1 mana) - Gain strength equal to the total number of Lotus Marks on all enemies. Exhaust.
+	Uncommon✱ 2(1). On the hunt - Gain strength equal to the total number of Lotus Marks on all enemies. Exhaust.
 
-3 mana
-
-	Rare★ Skilled Execution (2 mana) - Your next attack this turn is played a number of times equal to the number of Lotus Marks on the target.
-
-
+	Rare★ 3 (2.) Skilled Execution - Your next attack this turn is played a number of times equal to the number of Lotus Marks on the target.

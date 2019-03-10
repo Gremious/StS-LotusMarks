@@ -26,7 +26,7 @@ public class LotusStrike extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 
-    public static final String IMG = makeCardPath("LotusStrike.png");
+    public static final String IMG = makeCardPath("LotusSlash.png");
 
 // STAT DECLARATION 
 

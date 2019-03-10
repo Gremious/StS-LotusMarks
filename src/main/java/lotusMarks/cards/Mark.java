@@ -45,23 +45,15 @@ public class Mark extends CustomCard {
 
 
     public Mark() {
-
-
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
-
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new LotusMarkPower(m, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new LotusMarkPower(m, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
 
-    }
-
-    @Override
-    public AbstractCard makeCopy() {
-        return new Mark();
     }
 
     @Override

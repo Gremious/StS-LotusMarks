@@ -34,10 +34,11 @@
     "DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust."
   },
-  "lotusMarks:LotusSkilled": {
+  "lotusMarks:SkilledExecution": {
     "NAME": "Skilled Execution",
     "DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target.",
-    "UPGRADE_DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target."
+    "UPGRADE_DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target.",
+    "EXTENDED_DESCRIPTION": ["That enemy isn't marked!"]
   },
   "lotusMarks:LotusTest": {
     "NAME": "This is a test name.",

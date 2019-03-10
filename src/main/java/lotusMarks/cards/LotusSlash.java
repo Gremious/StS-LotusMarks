@@ -36,7 +36,7 @@ public class LotusSlash extends CustomCard {
 
 // TEXT DECLARATION 
 
-    public static final String IMG = makeCardPath("FullBloom.png");
+    public static final String IMG = makeCardPath("LotusStrike.png");
 
 // STAT DECLARATION 	
 

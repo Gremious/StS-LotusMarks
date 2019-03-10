@@ -16,8 +16,8 @@
   },
   "lotusMarks:LotusStrike": {
     "NAME": "Lotus Strike",
-    "DESCRIPTION": "Deal !D! damage. + !M! for every Lotus Mark on the enemy.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. + !M! for every Lotus Mark on the enemy."
+    "DESCRIPTION": "Deal !D! damage. Increase damage by !M! for every lotusmarks:Lotus_Mark on the enemy.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Increase damage by !M! for every lotusmarks:Lotus_Mark on the enemy."
   },
   "lotusMarks:Mark": {
     "NAME": "Mark",

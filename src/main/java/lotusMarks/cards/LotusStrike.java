@@ -2,6 +2,7 @@ package lotusMarks.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,20 +11,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import lotusMarks.LotusMarks;
+import lotusMarks.powers.LotusMarkPower;
 
 import static lotusMarks.LotusMarks.makeCardPath;
 
 
 public class LotusStrike extends CustomCard {
-	
-/*
-	"LotusStrike": {
-        "NAME": "Lotus Strike",
-        "DESCRIPTION": "Deal !D! damage. +!M! for every Lotus Mark on the enemy.",
-        "UPGRADE_DESCRIPTION": "Deal !D! damage. +!M! for every Lotus Mark on the enemy."
-*/
-
-// TEXT DECLARATION 
 
     public static final String ID = LotusMarks.makeID("LotusStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,9 +25,8 @@ public class LotusStrike extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-// -TEXT DECLARATION
 
-    public static final String IMG = makeCardPath("FullBloom.png");
+    public static final String IMG = makeCardPath("LotusStrike.png");
 
 // STAT DECLARATION 
 
@@ -47,38 +39,34 @@ public class LotusStrike extends CustomCard {
     private static final int DAMAGE = 6;
 
     private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int UPGRADE_PLUS_MAGIC = 2;
 
 // -STAT DECLARATION- 
 
 
     public LotusStrike() {
-
-
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.damage = this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = MAGIC;
-
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                m, new DamageInfo(p, damage, damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
     }
 
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster m, float tmp) {
-        if (m == null || m.getPower("Lotus_Mark") == null) {
+        if (m == null || m.getPower(LotusMarkPower.POWER_ID) == null) {
+            return damage;
+        } else {
+            tmp = damage + ((m.getPower(LotusMarkPower.POWER_ID).amount * this.magicNumber));
             return tmp;
         }
-        int markDamage = DAMAGE + (m.getPower("Lotus_Mark").amount * this.magicNumber);
-        tmp = markDamage;
-        return tmp;
     }
 
 
@@ -87,7 +75,7 @@ public class LotusStrike extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
-            this.upgradeMagicNumber(UPGRADE_MAGIC);
+            this.upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             this.initializeDescription();
         }
     }

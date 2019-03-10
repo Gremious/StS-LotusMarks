@@ -2,7 +2,7 @@ package lotusMarks.cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import lotusMarks.LotusMarks;
 import lotusMarks.powers.LotusMarkPower;
 
@@ -36,8 +37,8 @@ public class SeasonOfFire extends CustomCard {
 
     private static final int COST = 2;
 
-    public static int DAMAGE = 4;
-    public static int DAMAGE_UPGRADE = 2;
+    public static int DAMAGE = 1;
+    public static int MAGIC = 1;
 
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -48,7 +49,8 @@ public class SeasonOfFire extends CustomCard {
     public SeasonOfFire() {
 
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = DAMAGE;
+        baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = MAGIC;
 
     }
 
@@ -62,11 +64,19 @@ public class SeasonOfFire extends CustomCard {
                 count = mo.getPower(LotusMarkPower.POWER_ID).amount;
             }
 
-            for (int i = 0; i < count; i++) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                        mo, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.FIRE));
-            }
+            damage = count;
+            magicNumber = count;
+
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                    mo, new DamageInfo(p, damage, damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.FIRE));
+
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    mo, p, new VulnerablePower(mo, magicNumber, false), magicNumber));
+
+
+            damage = baseDamage;
+            magicNumber = baseMagicNumber;
 
         }
     }
@@ -76,7 +86,6 @@ public class SeasonOfFire extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(DAMAGE_UPGRADE);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

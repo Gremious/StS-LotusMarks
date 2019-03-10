@@ -65,12 +65,17 @@ public class LotusSlash extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                m, p, new LotusMarkPower(m, p, magicNumber), magicNumber));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(
                 m, new DamageInfo(p, damage, damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                m, new DamageInfo(p, damage, damageTypeForTurn),
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                m, p, new LotusMarkPower(m, p, magicNumber), magicNumber));
     }
 
 

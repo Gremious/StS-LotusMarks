@@ -31,8 +31,8 @@
   },
   "lotusMarks:SeasonOfFire": {
     "NAME": "Season Of Fire",
-    "DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have."
+    "DESCRIPTION": "Deal Damage and apply Vulnerable to every enemy equal to the amount of lotusmarks:Lotus_Marks they have.",
+    "UPGRADE_DESCRIPTION": "Deal Damage and apply Vulnerable to every enemy equal to the amount of lotusmarks:Lotus_Marks they have."
   },
   "lotusMarks:SkilledExecution": {
     "NAME": "Skilled Execution",

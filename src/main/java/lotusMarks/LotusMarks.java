@@ -18,6 +18,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import lotusMarks.archetypes.LotusMarchSelectionCard;
 import lotusMarks.cards.*;
 import lotusMarks.util.TextureLoader;
@@ -94,6 +95,14 @@ public class LotusMarks implements
 
         logger.info("Cards - added!");
 
+        UnlockTracker.unlockCard(LotusChain.ID);
+        UnlockTracker.unlockCard(SeasonOfFire.ID);
+        UnlockTracker.unlockCard(FullBloom.ID);
+        UnlockTracker.unlockCard(OnTheHunt.ID);
+        UnlockTracker.unlockCard(Mark.ID);
+        UnlockTracker.unlockCard(SkilledExecution.ID);
+        UnlockTracker.unlockCard(LotusSlash.ID);
+        UnlockTracker.unlockCard(LotusStrike.ID);
     }
 
     // ================ LOAD THE TEXT ===================

@@ -32,10 +32,11 @@ public class SeasonOfFire extends CustomCard {
 
 // STAT DECLARATION
 
-    public static final CardRarity RARITY = CardRarity.COMMON;
+    public static final CardRarity RARITY = CardRarity.UNCOMMON;
     public static final CardColor COLOR = AbstractCard.CardColor.GREEN;
 
     private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     public static int DAMAGE = 1;
     public static int MAGIC = 1;
@@ -51,7 +52,6 @@ public class SeasonOfFire extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
-
     }
 
     @Override
@@ -86,6 +86,7 @@ public class SeasonOfFire extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            upgradeBaseCost(UPGRADED_COST);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

@@ -11,8 +11,8 @@
   },
   "lotusMarks:LotusSlash": {
     "NAME": "Lotus Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Lotus Mark.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Lotus Marks."
+    "DESCRIPTION": "Deal !D! damage two times. NL Apply !M! Lotus Mark.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage two times. NL Apply !M! Lotus Marks."
   },
   "lotusMarks:LotusStrike": {
     "NAME": "Lotus Strike",

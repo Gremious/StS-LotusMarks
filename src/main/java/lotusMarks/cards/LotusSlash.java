@@ -47,8 +47,8 @@ public class LotusSlash extends CustomCard {
     public static final CardColor COLOR = AbstractCard.CardColor.GREEN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 1;
 
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;

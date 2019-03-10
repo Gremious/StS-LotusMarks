@@ -62,9 +62,9 @@ public class LotusStrike extends CustomCard {
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster m, float tmp) {
         if (m == null || m.getPower(LotusMarkPower.POWER_ID) == null) {
-            return damage;
+            return tmp;
         } else {
-            tmp = damage + ((m.getPower(LotusMarkPower.POWER_ID).amount * this.magicNumber));
+            tmp = DAMAGE + ((m.getPower(LotusMarkPower.POWER_ID).amount * this.magicNumber));
             return tmp;
         }
     }

@@ -1,5 +1,6 @@
 package lotusMarks;
 
+import archetypeAPI.archetypes.abstractArchetype;
 import archetypeAPI.util.IDCheckDontTouchPls;
 import basemod.BaseMod;
 import basemod.ModLabel;
@@ -12,10 +13,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import lotusMarks.archetypes.LotusMarchSelectionCard;
 import lotusMarks.cards.*;
 import lotusMarks.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
@@ -24,6 +27,8 @@ import org.apache.logging.log4j.Logger;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+
+import static lotusMarks.archetypes.LotusMarkSilent.lotusMarkSilentArchetypeFiles;
 
 @SpireInitializer
 public class LotusMarks implements
@@ -138,6 +143,12 @@ public class LotusMarks implements
         settingsPanel.addUIElement(new ModLabel("LotusMarks Mark doesn't have any settings!", 400.0f, 700.0f, settingsPanel, (me) -> {
         }));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+
+        if (Loader.isModLoaded("archetypeapi")) {
+            lotusMarkSilentArchetypeFiles.add("lotusMarksResources/localization/eng/ArchetypeAPIJsons/LotusMark-Silent-Archetype.json");
+            abstractArchetype.silentArchetypeSelectCards.addToTop(new LotusMarchSelectionCard().makeCopy());
+
+        }
     }
 
 

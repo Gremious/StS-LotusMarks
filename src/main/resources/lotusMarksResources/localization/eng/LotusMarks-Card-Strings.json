@@ -1,13 +1,13 @@
 {
+  "lotusMarks:FullBloom": {
+    "NAME": "Full Bloom",
+    "DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies.",
+    "UPGRADE_DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies."
+  },
   "lotusMarks:LotusChain": {
     "NAME": "Lotus Chain",
     "DESCRIPTION": "Deal !D! damage to a random enemy for each lotusmarks:Lotus_Mark on any enemy.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy for each Lotus Mark on any enemy."
-  },
-  "lotusMarks:SeasonOfFire": {
-    "NAME": "Season Of Fire",
-    "DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have."
   },
   "lotusMarks:LotusSlash": {
     "NAME": "Lotus Slash",
@@ -24,25 +24,30 @@
     "DESCRIPTION": "Apply !M! Lotus Mark and !M! vulnerable on an enemy.",
     "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks and !M! vulnerable on an enemy."
   },
-  "lotusMarks:FullBloom": {
-    "NAME": "Full Bloom",
-    "DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies.",
-    "UPGRADE_DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies."
-  },
   "lotusMarks:OnTheHunt": {
     "NAME": "On The Hunt",
     "DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain strength equal to the total number of Lotus Marks on all enemies. NL Exhaust."
   },
+  "lotusMarks:SeasonOfFire": {
+    "NAME": "Season Of Fire",
+    "DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to every enemy for each lotusmarks:Lotus_Mark they have."
+  },
   "lotusMarks:SkilledExecution": {
     "NAME": "Skilled Execution",
     "DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target.",
     "UPGRADE_DESCRIPTION": "Your next attack this turn is played an extra number of times equal to the number of lotusmarks:Lotus_Mark on the target.",
-    "EXTENDED_DESCRIPTION": ["That enemy isn't marked!"]
+    "EXTENDED_DESCRIPTION": [
+      "That enemy isn't marked!"
+    ]
   },
-  "lotusMarks:LotusTest": {
-    "NAME": "This is a test name.",
-    "DESCRIPTION": "Deal !D! damage. !M! Magic Number. Lotus Mark.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. !M! Magic Number. Lotus Mark."
+  "lotusMarks:LotusMarchSelectionCard": {
+    "NAME": "Lotus Marks",
+    "DESCRIPTION": "Add the Lotus Marks Archetype to your Card Draft Pool.",
+    "EXTENDED_DESCRIPTION": [
+      "Select Your Archetypes!",
+      "Add the Lotus Marks Archetype to your Card Draft Pool. NL Features: #gMark, #bLotus #bChain, #ySkilled #yExecution,"
+    ]
   }
 }

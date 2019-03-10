@@ -1,0 +1,15 @@
+{
+  "archetypeAPI:LotusMarkSilent": {
+    "NAME": "LotusMark",
+    "CARD_IDS": [
+      "lotusMarks:FullBloom",
+      "lotusMarks:LotusChain",
+      "lotusMarks:LotusSlash",
+      "lotusMarks:LotusStrike",
+      "lotusMarks:Mark",
+      "lotusMarks:OnTheHunt",
+      "lotusMarks:SeasonOfFire",
+      "lotusMarks:SkilledExecution"
+    ]
+  }
+}

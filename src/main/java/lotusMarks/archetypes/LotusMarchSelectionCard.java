@@ -18,7 +18,7 @@ public class LotusMarchSelectionCard extends AbstractArchetypeCard {
     public static final String EXTENDED_DESCRIPTION[] = cardStrings.EXTENDED_DESCRIPTION;
 
     public static final CardColor COLOR = CardColor.GREEN;
-    public static final CardType TYPE = CardType.ATTACK;
+    public static final CardType TYPE = CardType.SKILL;
 
     // ==/ Basic String/Type Declaration /==
 

@@ -40,15 +40,15 @@ public class FullBloom extends CustomCard {
 
     private static final int COST = 1;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
+    private static final int UPGRADED_PLUS_MAGIC = 1;
 
 // -STAT DECLARATION-
 
 
     public FullBloom() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.exhaust = true;
+        magicNumber = baseMagicNumber = MAGIC;
         GraveField.grave.set(this, true);
         AutoplayField.autoplay.set(this, true);
     }
@@ -58,14 +58,17 @@ public class FullBloom extends CustomCard {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new LotusMarkPower(mo, p, magicNumber), magicNumber));
         }
+        AbstractDungeon.player.loseEnergy(cost);
+        AbstractDungeon.player.hand.glowCheck();
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(UPGRADED_PLUS_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

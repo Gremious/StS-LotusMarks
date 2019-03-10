@@ -39,7 +39,7 @@ public class OnTheHunt extends CustomCard {
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 0;
 
     // -STAT DECLARATION-
 
@@ -62,10 +62,9 @@ public class OnTheHunt extends CustomCard {
                 marks += mo.getPower(LotusMarkPower.POWER_ID).amount;
             }
         }
-
-        for (int i = 0; i < marks; i++) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        }
+        magicNumber = marks;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        magicNumber = baseMagicNumber;
     }
 
 

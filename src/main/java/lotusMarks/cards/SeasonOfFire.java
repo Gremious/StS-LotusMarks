@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import lotusMarks.LotusMarks;
 import lotusMarks.powers.LotusMarkPower;
 
 import static lotusMarks.LotusMarks.makeCardPath;
@@ -18,7 +19,7 @@ import static lotusMarks.LotusMarks.makeCardPath;
 
 public class SeasonOfFire extends CustomCard {
 
-    public static final String ID = "SeasonOfFire";
+    public static final String ID = LotusMarks.makeID("SeasonOfFire");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String NAME = cardStrings.NAME;

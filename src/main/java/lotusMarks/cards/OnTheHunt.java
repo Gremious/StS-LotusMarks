@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import lotusMarks.LotusMarks;
 import lotusMarks.powers.LotusMarkPower;
 
 import static lotusMarks.LotusMarks.makeCardPath;
@@ -17,7 +18,7 @@ import static lotusMarks.LotusMarks.makeCardPath;
 public class OnTheHunt extends CustomCard {
 // TEXT DECLARATION	
 
-    public static final String ID = "OnTheHunt";
+    public static final String ID = LotusMarks.makeID("OnTheHunt");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String NAME = cardStrings.NAME;

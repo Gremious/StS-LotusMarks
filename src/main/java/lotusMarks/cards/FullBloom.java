@@ -8,23 +8,22 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import lotusMarks.LotusMarks;
 import lotusMarks.powers.LotusMarkPower;
 
 import static lotusMarks.LotusMarks.makeCardPath;
 
 public class FullBloom extends CustomCard {
 
-// TEXT DECLARATION
+    // TEXT DECLARATION
 
-    public static final String ID = "FullBloom";
+    public static final String ID = LotusMarks.makeID("FullBloom");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
-// -TEXT DECLARATION-
-
+    
     public static final String IMG = makeCardPath("FullBloom.png");
 
 // STAT DECLARATION

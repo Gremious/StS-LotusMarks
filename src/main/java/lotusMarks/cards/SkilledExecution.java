@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import lotusMarks.LotusMarks;
 import lotusMarks.powers.LotusMarkPower;
 import lotusMarks.powers.SkilledApplicationPower;
 
@@ -18,7 +19,7 @@ import static lotusMarks.LotusMarks.makeCardPath;
 public class SkilledExecution extends CustomCard {
 // TEXT DECLARATION
 
-    public static final String ID = "SkilledExecution";
+    public static final String ID = LotusMarks.makeID("SkilledExecution");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
 

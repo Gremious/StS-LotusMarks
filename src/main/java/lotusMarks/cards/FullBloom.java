@@ -50,7 +50,7 @@ public class FullBloom extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new LotusMarkPower(mo, p, magicNumber), magicNumber));
         }
     }

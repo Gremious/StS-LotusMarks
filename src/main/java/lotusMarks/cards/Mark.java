@@ -8,16 +8,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import lotusMarks.powers.LotusMarkPower;
 
 import static lotusMarks.LotusMarks.makeCardPath;
 
 
-public class OnTheHunt extends CustomCard {
-// TEXT DECLARATION	
+public class Mark extends CustomCard {
 
-    public static final String ID = "OnTheHunt";
+// TEXT DECLARATION
+
+    public static final String ID = "Mark";
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String NAME = cardStrings.NAME;
@@ -26,51 +27,41 @@ public class OnTheHunt extends CustomCard {
 
 // -TEXT DECLARATION-
 
-    public static final String IMG = makeCardPath("OnTheHunt.png");
+    public static final String IMG = makeCardPath("Mark.png");
 
-// STAT DECLARATION	
+// STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCard.CardColor.GREEN;
 
-    private static final int COST = 2;
-    private static final int UPGRADE_COST = 1;
+    private static final int COST = 0;
 
     private static final int MAGIC = 1;
+    private static final int UPGRADE_MAGIC = 1;
 
-    // -STAT DECLARATION-
+// -STAT DECLARATION-
 
-    public OnTheHunt() {
+
+    public Mark() {
 
 
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
         this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.exhaust = true;
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int marks = 0;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new LotusMarkPower(m, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
 
-        for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (mo.hasPower(LotusMarkPower.POWER_ID)) {
-                marks += mo.getPower(LotusMarkPower.POWER_ID).amount;
-            }
-        }
-
-        for (int i = 0; i < marks; i++) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        }
     }
-
 
     @Override
     public AbstractCard makeCopy() {
-        return new OnTheHunt();
+        return new Mark();
     }
 
     @Override
@@ -78,7 +69,7 @@ public class OnTheHunt extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
-            this.upgradeBaseCost(UPGRADE_COST);
+            this.upgradeMagicNumber(UPGRADE_MAGIC);
             this.initializeDescription();
         }
     }

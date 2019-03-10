@@ -19,7 +19,7 @@
     "DESCRIPTION": "Deal !D! damage. + !M! for every Lotus Mark on the enemy.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. + !M! for every Lotus Mark on the enemy."
   },
-  "lotusMarks:LotusMark": {
+  "lotusMarks:Mark": {
     "NAME": "Mark",
     "DESCRIPTION": "Apply !M! Lotus Mark and !M! vulnerable on an enemy.",
     "UPGRADE_DESCRIPTION": "Apply !M! Lotus Marks and !M! vulnerable on an enemy."

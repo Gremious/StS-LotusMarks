@@ -82,11 +82,10 @@ public class LotusMarks implements
         BaseMod.addCard(new SeasonOfFire());
         BaseMod.addCard(new FullBloom());
         BaseMod.addCard(new OnTheHunt());
-        BaseMod.addCard(new LotusMark());
+        BaseMod.addCard(new Mark());
         BaseMod.addCard(new LotusSkilled());
         BaseMod.addCard(new LotusSlash());
         BaseMod.addCard(new LotusStrike());
-        //BaseMod.addCard(new LotusTest());
 
         logger.info("Cards - added!");
 

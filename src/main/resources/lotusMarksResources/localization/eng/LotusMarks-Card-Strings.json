@@ -1,8 +1,8 @@
 {
   "lotusMarks:FullBloom": {
     "NAME": "Full Bloom",
-    "DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies.",
-    "UPGRADE_DESCRIPTION": "Apply !M! lotusmarks:Lotus_Marks to all enemies."
+    "DESCRIPTION": "Grave. NL Autoplay. NL Apply !M! lotusmarks:Lotus_Mark to all enemies.",
+    "UPGRADE_DESCRIPTION": "Grave. NL Autoplay. NL Apply !M! lotusmarks:Lotus_Marks to all enemies."
   },
   "lotusMarks:LotusChain": {
     "NAME": "Lotus Chain",

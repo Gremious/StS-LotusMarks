@@ -1,7 +1,6 @@
 package lotusMarks;
 
 import archetypeAPI.archetypes.abstractArchetype;
-import archetypeAPI.util.IDCheckDontTouchPls;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
@@ -21,6 +20,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import lotusMarks.archetypes.LotusMarchSelectionCard;
 import lotusMarks.cards.*;
+import lotusMarks.util.IDCheckDontTouchPls;
 import lotusMarks.util.TextureLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

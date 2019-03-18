@@ -58,7 +58,6 @@ public class FullBloom extends CustomCard {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new LotusMarkPower(mo, p, magicNumber), magicNumber));
         }
-        AbstractDungeon.player.loseEnergy(cost);
         AbstractDungeon.player.hand.glowCheck();
     }
 

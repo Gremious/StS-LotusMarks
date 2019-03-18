@@ -15,48 +15,49 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import lotusMarks.LotusMarks;
 import lotusMarks.util.TextureLoader;
 
 import static lotusMarks.LotusMarks.makePowerPath;
 
 public class SkilledApplicationPower extends AbstractPower {
     public AbstractCreature source;
-
-    public static final String POWER_ID = "SkilledApplicationPower";
+    
+    public static final String POWER_ID = LotusMarks.makeID("SkilledApplicationPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+    
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("SkilledApplicationPower84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("SkilledApplicationPower32.png"));
-
+    
     public SkilledApplicationPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
-
+        
         this.owner = owner;
         this.source = source;
         this.amount = amount;
-
+        
         type = PowerType.BUFF;
         isTurnBased = true;
-
+        
         region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
+        
         updateDescription();
     }
-
+    
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && this.amount > 0 && action.target instanceof AbstractMonster) {
+        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && amount > 0 && action.target instanceof AbstractMonster) {
             this.flash();
             AbstractMonster m = null;
             if (action.target != null) {
                 m = (AbstractMonster) action.target;
             }
-
-            while (this.amount > 0) {
+            
+            while (amount > 0) {
                 final AbstractCard tmp = card.makeStatEquivalentCopy();
                 AbstractDungeon.player.limbo.addToBottom(tmp);
                 tmp.current_x = card.current_x;
@@ -74,29 +75,25 @@ public class SkilledApplicationPower extends AbstractPower {
                 }
                 --amount;
             }
-
-            if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "SkilledApplicationPower"));
-            }
+            
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, source, ID));
         }
     }
-
+    
     @Override
     public void atEndOfTurn(final boolean isPlayer) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this.ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, source, ID));
     }
-
+    
     @Override
     public void updateDescription() {
-
+        
         if (this.amount == 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         } else {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
-
     }
-
 }
 
 

@@ -41,13 +41,5 @@
     "EXTENDED_DESCRIPTION": [
       "That enemy isn't marked!"
     ]
-  },
-  "lotusMarks:LotusMarchSelectionCard": {
-    "NAME": "Lotus Marks",
-    "DESCRIPTION": "Add the Lotus Marks Archetype to your Card Draft Pool.",
-    "EXTENDED_DESCRIPTION": [
-      "Select Your Archetypes!",
-      "Add the Lotus Marks Archetype to your Card Draft Pool. NL Features: #gMark, #bLotus #bChain, #ySkilled #yExecution,"
-    ]
   }
 }

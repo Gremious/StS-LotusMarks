@@ -1,15 +1,24 @@
 {
-  "archetypeAPI:LotusMarkSilent": {
-    "NAME": "LotusMark",
-    "CARD_IDS": [
-      "lotusMarks:FullBloom",
-      "lotusMarks:LotusChain",
-      "lotusMarks:LotusSlash",
-      "lotusMarks:LotusStrike",
-      "lotusMarks:Mark",
-      "lotusMarks:OnTheHunt",
-      "lotusMarks:SeasonOfFire",
-      "lotusMarks:SkilledExecution"
-    ]
-  }
+  "CHARACTER": "THE_SILENT",
+  "NAME": "Lotus Mark",
+  "CARD_TYPE": "SKILL",
+  "IMG": "lotusMarksResources/images/cards/Mark.png",
+  "TAGS": [
+    "SINGLE"
+  ],
+  "FEATURES": [
+    "lotusMarks:Mark",
+    "lotusMarks:LotusChain",
+    "lotusMarks:SkilledExecution"
+  ],
+  "CARD_IDS": [
+    "lotusMarks:FullBloom",
+    "lotusMarks:LotusChain",
+    "lotusMarks:LotusSlash",
+    "lotusMarks:LotusStrike",
+    "lotusMarks:Mark",
+    "lotusMarks:OnTheHunt",
+    "lotusMarks:SeasonOfFire",
+    "lotusMarks:SkilledExecution"
+  ]
 }

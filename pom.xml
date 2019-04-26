@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>lotusmarks</groupId>
     <artifactId>LotusMarks</artifactId>
-    <version>1.0.3</version>
+    <version>1.1.0</version>
     <name>lotusMarks</name>
 
     <properties>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
             <artifactId>ArchetypeAPI</artifactId>
-            <version>1.0.0</version>
+            <version>2.0.0</version>
             <scope>system</scope>
             <systemPath>C:/My Stuff/Games/Steam/steamapps/common/SlayTheSpire/mods/ArchetypeAPI.jar</systemPath>
             <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->

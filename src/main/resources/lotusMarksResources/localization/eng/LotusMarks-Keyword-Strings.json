@@ -8,6 +8,6 @@
       "mark",
       "marks"
     ],
-    "DESCRIPTION": "#yMark an enemy. Other cards interact with the #yMarks and become more powerful."
+    "DESCRIPTION": "#yMark an enemy. Other cards interact with the #yMarks and become more powerful. NL If your target isn't #yMarked, and the card requires a #yMark, it will apply 1 lotusmarks:Lotus_Mark [REMOVE_SPACE]."
   }
 ]

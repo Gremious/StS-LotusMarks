@@ -1,6 +1,7 @@
 {
   "CHARACTER": "THE_SILENT",
   "NAME": "Lotus Mark",
+  "ARCHETYPE_NAME": "Lotus Mark",
   "CARD_TYPE": "SKILL",
   "IMG": "lotusMarksResources/images/cards/Mark.png",
   "TAGS": [

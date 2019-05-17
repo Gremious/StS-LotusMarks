@@ -57,6 +57,7 @@ public class SkilledExecution extends CustomCard {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SkilledApplicationPower(p, p, magicNumber), magicNumber));
             magicNumber = baseMagicNumber;
         } else {
+            LotusMarkPower.applyMarksIfEmpty(m, p);
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new ThoughtBubble(p.dialogX, p.dialogY, EXTENDED_DESCRIPTION[0], true)));
         }
     }
